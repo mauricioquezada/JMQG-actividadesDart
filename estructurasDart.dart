@@ -1,6 +1,22 @@
-*/
+//1.Verificar si un número ingresado por el usuario es par y divisible entre 3
 
+import 'dart:io';
+void main() {
+  stdout.write('ingrese el numero : ');
+  int numero = int.parse(stdin.readLineSync()!);
+
+  bool esPar = numero % 2 == 0;
+  bool esDivisiblePor3 = numero % 3 == 0;
+
+  if (esPar && esDivisiblePor3) {
+    print('El número $numero es par y divisible entre 3.');
+  } else {
+    print('El número $numero no es par y divisible entre 3.');
+  }
+
+}
 //2.Ordenar una lista de números enteros ingresados por el usuario de menor a mayor
+
 import 'dart:io';
 void main() {
   stdout.write('Ingrese una lista de números separados por espacios: ');
@@ -9,7 +25,9 @@ void main() {
 
   numeros.sort();
   print('Lista ordenada: $numeros');
+  
 }
+
 //3.Guardar una lista con la información de diferentes objetos:
 void main() {
   List<Map<String, dynamic>> objetos = [
@@ -169,3 +187,4 @@ void main() {
 
   print('El factorial de $numero es: $factorial');
 }
+//13.
