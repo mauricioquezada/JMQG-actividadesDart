@@ -172,8 +172,6 @@ void main() {
 }
 //20 Calcular el factorial de un número ingresado por el usuario utilizando un bucle for 
 //y el operador de asignación *=.
-
-
 import 'dart:io';
 
 void main() {
@@ -187,4 +185,57 @@ void main() {
 
   print('El factorial de $numero es: $factorial');
 }
-//13.
+//13. Desarrolla un programa que imprima los números del 1 al 10 utilizando un bucle while.
+void main (){
+  int numero = 1;
+  print('Numeros del 1 al 10 :');
+  while (numero <= 10){
+    print(numero);
+    numero++,
+  }
+}
+//14.Realiza un programa que solicite al usuario adivinar
+// un número entre 1 y 100 utilizando un bucle do-while.
+import 'dart:io';
+import 'dart:math';
+void main (){Random random = Random();
+  int numeroAdivinar = random.nextInt(100) + 1;
+  int intentos = 0;
+  int intentoUsuario;
+
+  do {
+    stdout.write('Adivine el número (entre 1 y 100): ');
+    intentoUsuario = int.parse(stdin.readLineSync()!);
+    intentos++;
+
+    if (intentoUsuario < numeroAdivinar) {
+      print('Más alto.');
+    } else if (intentoUsuario > numeroAdivinar) {
+      print('Más bajo.');
+    } else {
+      print('¡Correcto! Has adivinado el número en $intentos intentos.');
+    }
+  } while (intentoUsuario != numeroAdivinar);
+}
+//15.  Crea una función que imprima "¡Hola, mundo!" cuando sea llamada.
+void saludar() {
+  print('¡Hola, mundo!');
+}
+void main() {
+  saludar();
+}
+//16.Desarrolla una función que reciba dos números como parámetros y devuelva la suma de los mismos.
+int sumarNumeros(int num1, int num2){
+  return num1 + num2;
+}
+void main (){
+  int resultado = sumarNumeros(22, 77);
+  print('la suma de los numeros es: $resultado');
+}
+
+
+//17. Implementa una función que calcule el área de un rectángulo utilizando la sintaxis de función flecha.
+//18.Define una función que tome dos parámetros, donde el segundo tenga un valor por defecto de 1, y calcule 
+//la potencia del primer número elevado al segundo.
+//19.Crea una función que tome un número como parámetro requerido y verifique si es primo.
+//Operadores de asignación
