@@ -232,10 +232,46 @@ void main (){
   int resultado = sumarNumeros(22, 77);
   print('la suma de los numeros es: $resultado');
 }
-
-
 //17. Implementa una función que calcule el área de un rectángulo utilizando la sintaxis de función flecha.
+
+double calcularAreaRectangulo(double base, double altura) => base * altura;
+void main() {
+  double base = 5;
+  double altura = 3;
+  double area = calcularAreaRectangulo(base, altura);
+  print('El área del rectángulo es: $area');
+}
+
 //18.Define una función que tome dos parámetros, donde el segundo tenga un valor por defecto de 1, y calcule 
 //la potencia del primer número elevado al segundo.
+double calcularPotencia(double base, [int exponente = 1]) {
+  return pow(base, exponente).toDouble();
+}
+void main() {
+  double base = 2;
+  int exponente = 3;
+  double resultado = calcularPotencia(base, exponente);
+  print('$base elevado a la $exponente es: $resultado');
+}
+
 //19.Crea una función que tome un número como parámetro requerido y verifique si es primo.
 //Operadores de asignación
+bool esPrimo(int numero) {
+  if (numero <= 1) {
+    return false;
+  }
+  for (int i = 2; i <= numero / 2; i++) {
+    if (numero % i == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+void main() {
+  int numero = 17;
+  if (esPrimo(numero)) {
+    print('$numero es un número primo.');
+  } else {
+    print('$numero no es un número primo.');
+  }
+}
